@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(245, 245, 254);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(36, 36, 36);
+}
+
 .title {
     font-size: 50px;
     text-align: center;
@@ -13,16 +20,16 @@
     display: flex;
     justify-content: center;
     height: 100vh;
-    /* align-items: center; */
 }
 
 .main-game {
     display: flex;
-    background-color: aquamarine;
+    background-color: rgb(212, 226, 221);
     max-width: 500px;
     max-height: 500px;
     width: 500px;
-    height: 500px;  
+    height: 500px;
+    box-shadow: 1px 1px 10px 5px rgb(226, 226, 226);
 }
 
 .row {
@@ -71,13 +78,15 @@
 
 .x1 {
     transform: translate(-50%, -50%) rotate(45deg);
+    box-shadow: 1px 1px 10px 5px rgb(209, 209, 209);
+
 }
 
 .x2 {
     transform: translate(-50%, -50%) rotate(-45deg);
+    box-shadow: 1px 1px 10px 5px rgb(209, 209, 209);
+
 }
-
-
 
 .o {
     position: absolute;
@@ -85,4 +94,13 @@
     border: 8px solid rgb(245, 110, 133);
     height: 50%;
     border-radius: 50%;
+    box-shadow: 1px 1px 10px 5px rgb(209, 209, 209);
+}
+
+.o-true {
+    background: linear-gradient(in hsl, rgb(172, 255, 172), rgb(187, 187, 255));
+}
+
+.x-true {
+    background: linear-gradient(in hsl, rgb(255, 252, 172), rgb(255, 187, 243));
 }
