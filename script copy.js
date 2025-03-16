@@ -1,14 +1,31 @@
+let p1 = 'activde'
+
+function activePlayer() {
+    p1 == 'active' ? p1 = 'inactive' : p1 = 'active'
+};
+
+console.log(p1)
+
 const boxes = document.querySelectorAll(".box")
 
 const xInsideB1 = document.querySelector(".b1 .x-display")
+const oInsideB1 = document.querySelector(".b1 .o-display")
+
 
 function listen(e) {
-    
-    if (e.target.classList.contains('b1')) {
-        console.log("Before:", xInsideB1.classList)
-        xInsideB1.classList.remove("display")
+
+    if (p1 == 'active') {
+
+        if (e.target.classList.contains('b1')) {
+            xInsideB1.classList.remove("x-display")}
+        }
+    else {
+
+        if (e.target.classList.contains('b1')) {
+            oInsideB1.classList.remove("o-display")}
     }
 }
+
 
 boxes.forEach(box => {
     box.addEventListener('click', listen)
