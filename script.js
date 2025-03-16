@@ -1,5 +1,8 @@
 let p1 = 'active';
 
+let gameOver = false;
+
+let winnerText = document.querySelector(".title");
 
 // change active player
 function activePlayer() {
@@ -36,7 +39,28 @@ const b9 = document.querySelector(".b9");
 
                 // win conditions
                 if (b1.classList.contains('o-true') && b2.classList.contains('o-true') && b3.classList.contains('o-true')) {
-                    console.log("you win")
+                    return winnerText.innerText = "Player 1 Wins!"
+                }
+                else if (b1.classList.contains('o-true') && b4.classList.contains('o-true') && b7.classList.contains('o-true')) {
+                    return winnerText.innerText = "Player 1 Wins!"
+                }
+                else if (b4.classList.contains('o-true') && b5.classList.contains('o-true') && b6.classList.contains('o-true')) {
+                    return winnerText.innerText = "Player 1 Wins!"
+                }
+                else if (b7.classList.contains('o-true') && b8.classList.contains('o-true') && b9.classList.contains('o-true')) {
+                    return winnerText.innerText = "Player 1 Wins!"
+                }
+                else if (b2.classList.contains('o-true') && b5.classList.contains('o-true') && b8.classList.contains('o-true')) {
+                    return winnerText.innerText = "Player 1 Wins!"
+                }
+                else if (b3.classList.contains('o-true') && b6.classList.contains('o-true') && b9.classList.contains('o-true')) {
+                    return winnerText.innerText = "Player 1 Wins!"
+                }
+                else if (b1.classList.contains('o-true') && b5.classList.contains('o-true') && b9.classList.contains('o-true')) {
+                    return winnerText.innerText = "Player 1 Wins!"
+                }
+                else if (b3.classList.contains('o-true') && b5.classList.contains('o-true') && b7.classList.contains('o-true')) {
+                    return winnerText.innerText = "Player 1 Wins!"
                 }
                 
                 //switch players
@@ -56,7 +80,28 @@ const b9 = document.querySelector(".b9");
 
                 // win conditions
                 if (b1.classList.contains('x-true') && b2.classList.contains('x-true') && b3.classList.contains('x-true')) {
-                    console.log("you win")
+                    return winnerText.innerText = "Player 2 Wins!"
+                }
+                else if (b1.classList.contains('x-true') && b4.classList.contains('x-true') && b7.classList.contains('x-true')) {
+                    return winnerText.innerText = "Player 2 Wins!"
+                }
+                else if (b4.classList.contains('x-true') && b5.classList.contains('x-true') && b6.classList.contains('x-true')) {
+                    return winnerText.innerText = "Player 2 Wins!"
+                }
+                else if (b7.classList.contains('x-true') && b8.classList.contains('x-true') && b9.classList.contains('x-true')) {
+                    return winnerText.innerText = "Player 2 Wins!"
+                }
+                else if (b2.classList.contains('x-true') && b5.classList.contains('x-true') && b8.classList.contains('x-true')) {
+                    return winnerText.innerText = "Player 2 Wins!"
+                }
+                else if (b3.classList.contains('x-true') && b6.classList.contains('x-true') && b9.classList.contains('x-true')) {
+                    return winnerText.innerText = "Player 2 Wins!"
+                }
+                else if (b1.classList.contains('x-true') && b5.classList.contains('x-true') && b9.classList.contains('x-true')) {
+                    return winnerText.innerText = "Player 2 Wins!"
+                }
+                else if (b3.classList.contains('x-true') && b5.classList.contains('x-true') && b7.classList.contains('x-true')) {
+                    return winnerText.innerText = "Player 2 Wins!"
                 }
 
                 //switch players
