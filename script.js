@@ -27,22 +27,30 @@ const b9 = document.querySelector(".b9");
 
         if (p1 === 'active') {
 
-        e.currentTarget.querySelector(".o-display").classList.remove("o-display"); // Remove the 'display' class to show the element
-        e.currentTarget.classList.add("o-true");
+            if (e.currentTarget.classList.contains("x-true") || e.currentTarget.classList.contains("o-true")) {return}
 
-        // win conditions
-        if (b1.classList.contains('o-true') && b2.classList.contains('o-true') && b3.classList.contains('o-true')) {
-            console.log("you win")
-        }
-        
-        //switch players
-        activePlayer()
+            else {
 
+                e.currentTarget.querySelector(".o-display").classList.remove("o-display"); // Remove the 'display' class to show the element
+                e.currentTarget.classList.add("o-true");
+
+                // win conditions
+                if (b1.classList.contains('o-true') && b2.classList.contains('o-true') && b3.classList.contains('o-true')) {
+                    console.log("you win")
+                }
+                
+                //switch players
+                activePlayer()
+
+    }
 
     }
 
         else {
 
+            if (e.currentTarget.classList.contains("x-true") || e.currentTarget.classList.contains("o-true")) {return}
+
+            else {
                 e.currentTarget.querySelector(".x-display").classList.remove("x-display"); // Remove the 'display' class to show the element
                 e.currentTarget.classList.add("x-true");
 
@@ -53,7 +61,8 @@ const b9 = document.querySelector(".b9");
 
                 //switch players
                 activePlayer()
-            }
+        }
+    }
 
 };
 
@@ -66,7 +75,11 @@ boxes.forEach(box => {
 
 
 
-// need to be able to select individual boxes
-// then distinguish between x and o divs in that box
-// control for which player is active
-// finally, check for three in a row (hard)
+// need to be able to select individual boxes DONE
+// then distinguish between x and o divs in that box DONE
+// control for which player is active DONE
+// finally, check for three in a row (hard) ALMOST DONE
+
+// make sure a box can only be clicked once
+    // check if o-true exists in box, if so, return (make click irrelevant). then player's don't change.
+
