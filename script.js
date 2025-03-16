@@ -1,4 +1,4 @@
-let p1 = 'active'
+let p1 = 'actidve'
 
 function activePlayer() {
     p1 == 'active' ? p1 = 'inactive' : p1 = 'active'
@@ -8,9 +8,17 @@ console.log(p1)
 
 const boxes = document.querySelectorAll(".box")
 
+if (p1 == 'active') {
 
-function listen(e) {
-    e.currentTarget.querySelector(".o-display").classList.remove("o-display"); // Remove the 'display' class to show the element
+    function listen(e) {
+        e.currentTarget.querySelector(".o-display").classList.remove("o-display"); // Remove the 'display' class to show the element
+    }
+}
+
+else {
+    function listen(e) {
+        e.currentTarget.querySelector(".x-display").classList.remove("x-display"); // Remove the 'display' class to show the element
+    }
 }
 
 
